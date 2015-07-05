@@ -1,0 +1,10 @@
+<svg ng-attr-width="{{width}}" ng-attr-height="{{height}}">
+<defs><clipPath id="clip"><rect ng-attr-width="{{rectWidth}}" ng-attr-height="{{rectHeight}}"></rect></clipPath></defs>
+<g ng-attr-transform="translate({{margin.left}},{{margin.top}})">
+    <rect ng-attr-width="{{rectWidth}}" ng-attr-height="{{rectHeight}}"></rect>
+    <g class="x axis" ng-attr-transform="translate(0, {{rectHeight}})"></g>
+    <g class="y axis"></g>
+    <g id="circles"  clip-path="url(#clip)"></g>
+</g>    
+</svg>
+<button class="reset" ng-if="zoomed" ng-click="resetZoom()">Reset</button>
